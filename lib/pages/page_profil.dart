@@ -9,15 +9,31 @@ class PageProfil extends StatelessWidget {
     return Scaffold(
       endDrawer: Drawer(
         child: ListView(
-          children: const [
+          children:  [
             DrawerHeader(
               decoration: BoxDecoration(
                 color: Colors.blue,
               ),
-              child: Text("Menu"),
+              child: Text("Menu",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+
+              ),),
               ),
-              ListTile(title: Text("Profil")),
-              ListTile(title: Text("Paramètres")),
+              ListTile(title: Text("Accueil", style: TextStyle(color:Colors.blue)),
+              trailing:  Icon(Icons.chevron_right),
+              onTap: () {
+                Navigator.pushNamed(context, "/accueil");
+              },
+              ),
+              ListTile(title: Text("Paramètres", style: TextStyle(color: Colors.blue)),
+              trailing:  Icon(Icons.chevron_right),
+              onTap: (){
+                Navigator.pushNamed(context, "/parametres");
+              },
+              ),
           ],
         ),
       ),

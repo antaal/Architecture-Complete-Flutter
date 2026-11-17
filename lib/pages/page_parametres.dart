@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 class PageParametres extends StatelessWidget {
-  const new({super.key});
+  const PageParametres({super.key});
 
   @override
   Widget build(BuildContext context) {

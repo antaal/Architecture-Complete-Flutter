@@ -16,7 +16,7 @@ class MonApplication extends StatelessWidget {
       title: 'Mon Application',
       home: PageAccueil(),
       routes: {
-        '/page1': (context) =>PageAccueil(),
+        '/accueil': (context) =>PageAccueil(),
         '/profil': (context) =>PageProfil(),
         '/parametres': (context) =>PageParametres(),
       },
