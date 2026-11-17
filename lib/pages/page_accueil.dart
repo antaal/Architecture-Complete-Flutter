@@ -13,6 +13,25 @@ class PageAccueil extends StatelessWidget {
         title:const Text("Ma page d'accueil"),
         centerTitle: true,
         leading: Icon(Icons.person),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.search),
+            tooltip: 'Rechercher',
+            onPressed: () {
+              //instruction pour naviguer vers la page de recherche
+              print("Page de recherche ici");
+            },
+            ),
+            IconButton(
+            icon: const Icon(Icons.settings),
+            tooltip: 'Paramètres',
+            onPressed: () {
+              //instruction pour naviguer vers la page de paramètres
+              print("Page de paramètres ici");
+            },
+            ),
+
+        ],
       ),
       body: const Center(
         child: Column(
