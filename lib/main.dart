@@ -19,10 +19,10 @@ class MonApplication extends StatelessWidget {
         '/page1': (context) =>PageAccueil(),
         '/profil': (context) =>PageProfil(),
         '/parametres': (context) =>PageParametres(),
-
-
-
       },
+      onUnknownRoute: (context) => MaterialPageRoute(
+        builder: (context)=> PageAccueil()
+        ),
     );
   }
 }

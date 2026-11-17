@@ -12,7 +12,17 @@ class PageAccueil extends StatelessWidget {
         foregroundColor: Colors.white,
         title:const Text("Ma page d'accueil"),
         centerTitle: true,
-        leading: Icon(Icons.person),
+        // leading: Icon(Icons.person),
+
+        leading: IconButton(
+          icon: const Icon(Icons.person),
+          tooltip: 'Profil',
+          onPressed: () {
+            //Instruction pour naviguer vers la page de profil
+            print("Page de profil ici");
+            Navigator.pushNamed(context, "/profil");
+          },
+        ),
         actions: [
           IconButton(
             icon: const Icon(Icons.search),
@@ -36,6 +46,8 @@ class PageAccueil extends StatelessWidget {
       body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.max,
           children: [
             Text("Bienvenue !!"),
             Text("Ceci est la page d'accueil"),
