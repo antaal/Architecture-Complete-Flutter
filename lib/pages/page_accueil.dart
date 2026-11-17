@@ -7,7 +7,22 @@ class PageAccueil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title:Text("Ma page d'accueil"),
-      ));
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 1, 82, 4),
+        foregroundColor: Colors.white,
+        title:const Text("Ma page d'accueil"),
+        centerTitle: true,
+        leading: Icon(Icons.person),
+      ),
+      body: const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Bienvenue !!"),
+            Text("Ceci est la page d'accueil"),
+          ],
+        )
+      ),
+      );
   }
 }
